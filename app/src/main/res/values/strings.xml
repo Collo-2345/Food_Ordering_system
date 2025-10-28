@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Food Ordering</string>
+    <string name="food_ordering_system">Food Ordering System</string>
+    <string name="total_0">Total:0</string>
+    <string name="images">Images</string>
+    <string name="food_name">Food Name</string>
+    <string name="price">Price</string>
+    <string name="remove">-</string>
+    <string name="add">+</string>
+    <string name="quantity">0</string>
 </resources>

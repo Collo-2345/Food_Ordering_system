@@ -16,7 +16,8 @@
         android:layout_height="80dp"
         android:layout_margin="14dp"
         android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -44,6 +45,7 @@
                         android:layout_marginTop="3dp"
                         android:layout_marginEnd="3dp"
                         android:layout_marginBottom="3dp"
+                        android:contentDescription="@string/images"
                         android:scaleType="centerCrop"
                         android:src="@mipmap/ic_launcher"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -60,9 +62,9 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="70dp"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="10dp"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/img_l"
@@ -73,9 +75,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed"
-                    android:text="Food Name"
+                    android:text="@string/food_name"
                     android:textColor="@color/black"
-                    android:textFontWeight="500"
                     android:textSize="17sp"
                     android:textStyle="bold" />
 
@@ -85,10 +86,10 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed"
                     android:paddingTop="6dp"
+                    android:text="@string/price"
                     android:textColor="#0CA612"
-                    android:text="Price"
-                    android:textFontWeight="500"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
 
 
             </LinearLayout>
@@ -114,10 +115,11 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="16dp"
-                        android:text="0"
+                        android:text="@string/quantity"
                         android:textColor="@color/black"
-                        android:textSize="18dp"
+                        android:textSize="19sp"
                         android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed"
                         app:layout_constraintBottom_toBottomOf="@+id/add"
                         app:layout_constraintEnd_toStartOf="@+id/add"
                         app:layout_constraintHorizontal_bias="0.5"
@@ -126,12 +128,12 @@
 
                     <Button
                         android:id="@+id/subtract"
-                        android:layout_width="44dp"
-                        android:layout_height="24dp"
+                        android:layout_width="58dp"
+                        android:layout_height="28dp"
                         android:layout_gravity="center"
-                        android:text="-"
+                        android:text="@string/remove"
                         android:background="@drawable/bg2"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:textColor="@color/black"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@+id/qty"
@@ -143,14 +145,14 @@
 
                     <Button
                         android:id="@+id/add"
-                        android:layout_width="44dp"
-                        android:layout_height="24dp"
+                        android:layout_width="58dp"
+                        android:layout_height="28dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="20dp"
                         android:background="@drawable/bg"
-                        android:text="+"
-                        android:textSize="18dp"
+                        android:text="@string/add"
                         android:textColor="@color/black"
+                        android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"

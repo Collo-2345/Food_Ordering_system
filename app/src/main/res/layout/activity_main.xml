@@ -3,42 +3,50 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="#DCD9D9"
+    android:background="@color/cyan"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="22dp"
         android:background="#021557"
-        android:fontFamily="sans-serif-condensed"
-        android:gravity="center_horizontal"
-        android:paddingTop="30dp"
-        android:paddingBottom="10dp"
-        android:text="Food Ordering System"
-        android:textColor="#18D320"
-        android:textFontWeight="500"
-        android:textSize="26sp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_horizontal"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:text="@string/food_ordering_system"
+            android:textColor="#18D320"
+            android:textFontWeight="500"
+            android:textSize="26sp" />
+
+
+    </LinearLayout>
 
 
     <ListView
         android:id="@+id/foodListView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
         android:layout_weight="1"
+        android:background="#DCD9D9"
         app:layout_constraintBottom_toTopOf="@+id/totalText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/container" />
 
 
     <TextView
@@ -49,7 +57,7 @@
         android:background="#021557"
         android:fontFamily="sans-serif-condensed"
         android:gravity="center_horizontal"
-        android:text="Total:0"
+        android:text="@string/total_0"
         android:textColor="#18D320"
         android:textFontWeight="600"
         android:textSize="24sp"
